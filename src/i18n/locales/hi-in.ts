@@ -67,6 +67,7 @@ export const TEXT: I18N = {
     topFilm: 'शीर्ष फिल्म',
     recentAlbum: 'हाल का एल्बम',
     popularTag: 'लोकप्रिय टैग',
+    popularPlace: 'लोकप्रिय स्थान',
   },
   footer: {
     madeWith: 'निर्मित',
@@ -141,6 +142,8 @@ export const TEXT: I18N = {
     selectPhotosExit: 'चयन बंद करें',
     appInsights: 'ऐप इनसाइट्स',
     appConfig: 'ऐप कॉन्फ़िगरेशन',
+    clearCache: 'कैश साफ़ करें',
+    clearCacheSuccess: 'साइट कैश साफ़ हो गया है',
     edit: 'संपादित करें',
     favorite: 'पसंदीदा',
     unfavorite: 'पसंदीदा नहीं',

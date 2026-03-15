@@ -67,6 +67,7 @@ export const TEXT: I18N = {
     topFilm: 'শীর্ষ ফিল্ম',
     recentAlbum: 'সাম্প্রতিক অ্যালবাম',
     popularTag: 'জনপ্রিয় ট্যাগ',
+    popularPlace: 'জনপ্রিয় স্থান',
   },
   footer: {
     madeWith: 'তৈরি হয়েছে',
@@ -141,6 +142,8 @@ export const TEXT: I18N = {
     selectPhotosExit: 'নির্বাচন বন্ধ করুন',
     appInsights: 'অ্যাপ ইনসাইট',
     appConfig: 'অ্যাপ কনফিগারেশন',
+    clearCache: 'ক্যাশ সাফ করুন',
+    clearCacheSuccess: 'সাইট ক্যাশ সাফ করা হয়েছে',
     edit: 'এডিট',
     favorite: 'পছন্দ',
     unfavorite: 'পছন্দ অপসারণ',

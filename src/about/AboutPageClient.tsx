@@ -24,11 +24,13 @@ import Link from 'next/link';
 import { PATH_ADMIN_ABOUT_EDIT } from '@/app/path';
 import { LuCirclePlus, LuUser } from 'react-icons/lu';
 import AdminEmptyState from '@/admin/AdminEmptyState';
+import { Place } from '@/place';
+import PlaceEntity from '@/place/PlaceEntity';
 
 export default function AboutPageClient({
   title,
   subhead,
-  description,
+  descriptionHtml,
   photosCount = 0,
   photosOldest,
   photoAvatar,
@@ -37,13 +39,14 @@ export default function AboutPageClient({
   lens,
   recipe,
   film,
-  album,
   tag,
+  place,
+  album,
   lastUpdated,
 }: {
   title?: string
   subhead?: string
-  description?: ReactNode
+  descriptionHtml?: ReactNode
   photosCount?: number
   photosOldest?: string
   photoAvatar?: Photo
@@ -52,8 +55,9 @@ export default function AboutPageClient({
   lens?: Lens
   recipe?: string
   film?: string
-  album?: Album
   tag?: string
+  place?: Place
+  album?: Album
   lastUpdated?: Date
 }) {
   const {
@@ -118,18 +122,27 @@ export default function AboutPageClient({
         badged={false}
       />,
     ),
-    album && renderItem(
-      appText.about.recentAlbum,
-      <PhotoAlbum
-        album={album}
-        type="text-only"
-        contrast="high"
-      />,
-    ),
     tag && renderItem(
       appText.about.popularTag,
       <PhotoTag
         tag={tag}
+        type="text-only"
+        contrast="high"
+      />,
+    ),
+    place && renderItem(
+      appText.about.popularPlace,
+      <PlaceEntity
+        place={place}
+        type="text-only"
+        contrast="high"
+        badged={false}
+      />,
+    ),
+    album && renderItem(
+      appText.about.recentAlbum,
+      <PhotoAlbum
+        album={album}
         type="text-only"
         contrast="high"
       />,
@@ -143,6 +156,7 @@ export default function AboutPageClient({
     recipe,
     film,
     album,
+    place,
     tag,
   ]);
 
@@ -178,29 +192,30 @@ export default function AboutPageClient({
               </div>
               {isUserSignedIn && <AdminAboutMenu />}
             </div>
-            {description
-              ? <div className="text-medium [&>*>a]:underline">
-                {description}
-              </div>
+            {descriptionHtml
+              ? descriptionHtml
               : isUserSignedIn &&
-                <Link
-                  href={PATH_ADMIN_ABOUT_EDIT}
-                  className={clsx(
-                    'flex items-center justify-center gap-2.5',
-                    'border border-dashed border-medium rounded-lg',
-                  )}
-                >
-                  <AdminEmptyState
-                    icon={<LuCirclePlus size={22} />}
-                    includeContainer={false}
-                    className="gap-3! p-6!"
+                  <Link
+                    href={PATH_ADMIN_ABOUT_EDIT}
+                    className={clsx(
+                      'flex items-center justify-center gap-2.5',
+                      'border border-dashed border-medium rounded-lg',
+                    )}
                   >
-                    Add optional description
-                  </AdminEmptyState>
-                </Link>}
+                    <AdminEmptyState
+                      icon={<LuCirclePlus size={22} />}
+                      includeContainer={false}
+                      className="gap-3! p-6!"
+                    >
+                      Add optional description
+                    </AdminEmptyState>
+                  </Link>}
             <AnimateItems
               className={clsx(
-                'grid gap-x-2 gap-y-6 grid-cols-2 lg:grid-cols-4',
+                'grid gap-x-2 gap-y-6 grid-cols-2',
+                items.length === 7 || items.length === 8
+                  ? 'lg:grid-cols-4'
+                  : 'lg:grid-cols-3',
               )}
               items={items}
             />

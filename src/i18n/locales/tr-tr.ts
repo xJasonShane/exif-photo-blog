@@ -67,6 +67,7 @@ export const TEXT: I18N = {
     topFilm: 'En çok kullanılan film',
     recentAlbum: 'Son albüm',
     popularTag: 'Popüler etiket',
+    popularPlace: 'Popüler yer',
   },
   footer: {
     madeWith: 'Hazırlayan:',
@@ -141,6 +142,8 @@ export const TEXT: I18N = {
     selectPhotosExit: 'Seçmeyi Durdur',
     appInsights: 'Uygulama Analizi',
     appConfig: 'Uygulama Yapılandırması',
+    clearCache: 'Önbelleği Temizle',
+    clearCacheSuccess: 'Site önbelleği temizlendi',
     edit: 'Düzenle',
     favorite: 'Favori',
     unfavorite: 'Favoriden Çıkar',

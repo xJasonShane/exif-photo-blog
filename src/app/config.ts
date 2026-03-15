@@ -152,6 +152,10 @@ export const SIDEBAR_TEXT =
   process.env.NEXT_PUBLIC_PAGE_ABOUT ||
   process.env.NEXT_PUBLIC_SITE_ABOUT;
 
+export const ABOUT_DESCRIPTION_DEFAULT =
+  process.env.NEXT_PUBLIC_META_DESCRIPTION ||
+  process.env.NEXT_PUBLIC_SIDEBAR_TEXT;
+
 // STORAGE
 
 // STORAGE: DATABASE
@@ -330,6 +334,8 @@ export const SHOW_KEYBOARD_SHORTCUT_TOOLTIPS =
   process.env.NEXT_PUBLIC_HIDE_KEYBOARD_SHORTCUT_TOOLTIPS !== '1';
 export const SHOW_EXIF_DATA =
   process.env.NEXT_PUBLIC_HIDE_EXIF_DATA !== '1';
+export const ALWAYS_SHOW_EXPOSURE_COMP =
+  process.env.NEXT_PUBLIC_ALWAYS_SHOW_EXPOSURE_COMP === '1';
 export const SHOW_ZOOM_CONTROLS =
   process.env.NEXT_PUBLIC_HIDE_ZOOM_CONTROLS !== '1';
 export const SHOW_TAKEN_AT_TIME =
@@ -495,6 +501,7 @@ export const APP_CONFIGURATION = {
   showAboutPage: SHOW_ABOUT_PAGE,
   showKeyboardShortcutTooltips: SHOW_KEYBOARD_SHORTCUT_TOOLTIPS,
   showExifInfo: SHOW_EXIF_DATA,
+  alwaysShowExposureComp: ALWAYS_SHOW_EXPOSURE_COMP,
   showZoomControls: SHOW_ZOOM_CONTROLS,
   showTakenAtTimeHidden: SHOW_TAKEN_AT_TIME,
   showRepoLink: SHOW_REPO_LINK,

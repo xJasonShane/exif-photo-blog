@@ -67,6 +67,7 @@ export const TEXT: I18N = {
     topFilm: 'Film teratas',
     recentAlbum: 'Album terbaru',
     popularTag: 'Tag populer',
+    popularPlace: 'Tempat populer',
   },
   footer: {
     madeWith: 'Dibuat dengan',
@@ -141,6 +142,8 @@ export const TEXT: I18N = {
     selectPhotosExit: 'Berhenti Memilih',
     appInsights: 'Wawasan Aplikasi',
     appConfig: 'Konfigurasi Aplikasi',
+    clearCache: 'Bersihkan Cache',
+    clearCacheSuccess: 'Cache situs telah dibersihkan',
     edit: 'Edit',
     favorite: 'Favorit',
     unfavorite: 'Hapus dari Favorit',
